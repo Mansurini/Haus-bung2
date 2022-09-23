@@ -19,7 +19,9 @@ public class HalloJavaForEach {
         Consumer<String> consumer = (String s) -> System.out.println(s);
         liste.forEach(consumer);
 
-        
+        liste.forEach(System.out::println);
+
+
 
     }
 }
