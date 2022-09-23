@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.function.Consumer;
 
 public class HalloJavaForEach {
     List <String> liste;
@@ -14,5 +15,11 @@ public class HalloJavaForEach {
         }
 
         liste.forEach((String s) -> System.out.println(s));
+
+        Consumer<String> consumer = (String s) -> System.out.println(s);
+        liste.forEach(consumer);
+
+        
+
     }
 }
