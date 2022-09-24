@@ -11,6 +11,6 @@ public class Main {
         //hallo.listeausgeben();
 
         NumberTester nt = new NumberTester("src/Dateien/ZahlenZumTesten");
-        
+
     }
 }

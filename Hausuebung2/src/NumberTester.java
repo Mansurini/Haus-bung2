@@ -2,9 +2,10 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.function.Consumer;
 
 public class NumberTester {
-        ArrayList<Integer> ZahlenZumTesten;
+        ArrayList<Integer> ZahlenZumTesten = new ArrayList<>();
         NumberTest oddTester;
         NumberTest primeTester;
         NumberTest palindromTester;
@@ -14,7 +15,6 @@ public class NumberTester {
                 try(Scanner scanner = new Scanner(new File(fileName)))
                 {
                         int n = Integer.parseInt(scanner.nextLine());
-                        ZahlenZumTesten = new ArrayList<Integer>();
 
                         scanner.forEachRemaining((String s) -> ZahlenZumTesten.add(Integer.valueOf(s)));        //Genius (:D
 
@@ -42,10 +42,24 @@ public class NumberTester {
                         }
                         return true;
                 });
+
+                //System.out.println(oddTester.testNumber(ZahlenZumTesten.get(3)));     Wollte schauen ob es funktioniert
         }
 
         public void testFile(){
-                //TODO
+                for (int i = 0; i < ZahlenZumTesten.size(); i++)
+                {
+                        switch (ZahlenZumTesten.get(i))
+                        {
+                                case 1:
+                                break;
+                                case 2:
+                                break;
+                                case 3:
+                                break;
+                                default: System.out.println("Ungültig");
+                        }
+                }
         }
 
 
