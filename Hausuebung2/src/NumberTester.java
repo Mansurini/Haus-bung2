@@ -51,13 +51,14 @@ public class NumberTester {
                 {
                         switch (ZahlenZumTesten.get(i))
                         {
-                                case 1:
+                                case 1: System.out.println("Odd = " + oddTester.testNumber(ZahlenZumTesten.get(++i)));
+                                        break;
+                                case 2: System.out.println("Prime = " + primeTester.testNumber(ZahlenZumTesten.get(++i)));
+                                        break;
+                                case 3: System.out.println("Palindrome = " + palindromTester.testNumber(ZahlenZumTesten.get(++i)));
                                 break;
-                                case 2:
+                                default: ++i; System.out.println("Ungültig");
                                 break;
-                                case 3:
-                                break;
-                                default: System.out.println("Ungültig");
                         }
                 }
         }

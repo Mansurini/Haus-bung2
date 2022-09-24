@@ -12,5 +12,6 @@ public class Main {
 
         NumberTester nt = new NumberTester("src/Dateien/ZahlenZumTesten");
 
+        nt.testFile();
     }
 }
