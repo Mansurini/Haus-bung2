@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
+import Beispiel3.NumberTester;
 
 public class Main {
     public static void main(String[] args) {
@@ -7,7 +6,7 @@ public class Main {
         //l.add("Hallo");
         //l.add("Welt");
         //l.add("!");
-        //HalloJavaForEach hallo = new HalloJavaForEach(l);
+        //Beispiel2.HalloJavaForEach hallo = new Beispiel2.HalloJavaForEach(l);
         //hallo.listeausgeben();
 
         NumberTester nt = new NumberTester("src/Dateien/ZahlenZumTesten");

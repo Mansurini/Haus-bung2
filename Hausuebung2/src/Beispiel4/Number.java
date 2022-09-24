@@ -1,3 +1,5 @@
+package Beispiel4;
+
 public class Number {
     private double a;
     private double b;

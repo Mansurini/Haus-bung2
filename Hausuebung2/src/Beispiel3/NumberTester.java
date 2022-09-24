@@ -1,8 +1,11 @@
+package Beispiel3;
+
+import Beispiel3.NumberTest;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.function.Consumer;
 
 public class NumberTester {
         ArrayList<Integer> ZahlenZumTesten = new ArrayList<>();
