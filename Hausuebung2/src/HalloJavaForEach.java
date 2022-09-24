@@ -20,8 +20,5 @@ public class HalloJavaForEach {
         liste.forEach(consumer);
 
         liste.forEach(System.out::println);
-
-
-
     }
 }

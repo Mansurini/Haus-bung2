@@ -1,3 +1,8 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class NumberTester {
         NumberTest oddTester;
         NumberTest primeTester;
@@ -5,24 +10,32 @@ public class NumberTester {
 
         public NumberTester(String fileName)
         {
-            //TODO
-        }
+                try(Scanner scanner = new Scanner(new File(fileName)))
+                {
+                        int n = Integer.parseInt(scanner.nextLine());
+                        ArrayList<Integer> ZahlenZumTesten = new ArrayList<Integer>();
 
-        public void setOddEvenTester(NumberTest oddTester)
-        {
-                this.oddTester = oddTester;
-        }
+                        scanner.forEachRemaining((String s) -> ZahlenZumTesten.add(Integer.valueOf(s)));        //Genius (:D
 
-        public void setPrimeTester( NumberTest primeTester ) {
-                this.primeTester = primeTester;
-        }
+                        
+                } catch (FileNotFoundException e) {
+                        throw new RuntimeException(e);
+                }
 
-        public void setPalindromTester(NumberTest palindromTester) {
-                this.palindromTester = palindromTester;
+
         }
 
         public void testFile(){
                 //TODO
         }
 
+
+        public void setOddEvenTester(NumberTest oddTester)
+        {
+                this.oddTester = oddTester;
+        }
+
+        public void setPrimeTester( NumberTest primeTester ) {this.primeTester = primeTester;}
+
+        public void setPalindromTester(NumberTest palindromTester) {this.palindromTester = palindromTester;}
 }
