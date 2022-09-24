@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class NumberTester {
+        ArrayList<Integer> ZahlenZumTesten;
         NumberTest oddTester;
         NumberTest primeTester;
         NumberTest palindromTester;
@@ -13,16 +14,34 @@ public class NumberTester {
                 try(Scanner scanner = new Scanner(new File(fileName)))
                 {
                         int n = Integer.parseInt(scanner.nextLine());
-                        ArrayList<Integer> ZahlenZumTesten = new ArrayList<Integer>();
+                        ZahlenZumTesten = new ArrayList<Integer>();
 
                         scanner.forEachRemaining((String s) -> ZahlenZumTesten.add(Integer.valueOf(s)));        //Genius (:D
 
-                        
                 } catch (FileNotFoundException e) {
                         throw new RuntimeException(e);
                 }
 
+                setOddEvenTester((int number) -> number%2 != 0);
 
+                setPrimeTester((int number) -> {for (int i = number - 1; i > 1;i--){
+                        if (number%i == 0.0) {
+                                return false;
+                        }
+                }
+                        return true;
+                });
+
+                setPalindromTester((int number) -> {
+                        String str = String.valueOf(number);
+                        int i = 0, j = str.length() - 1;
+                        while (i < j) {
+                                if (str.charAt(i) != str.charAt(j))
+                                        return false;
+                                i++;j--;
+                        }
+                        return true;
+                });
         }
 
         public void testFile(){
