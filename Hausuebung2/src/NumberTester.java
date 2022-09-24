@@ -64,10 +64,7 @@ public class NumberTester {
         }
 
 
-        public void setOddEvenTester(NumberTest oddTester)
-        {
-                this.oddTester = oddTester;
-        }
+        public void setOddEvenTester(NumberTest oddTester) {this.oddTester = oddTester;}
 
         public void setPrimeTester( NumberTest primeTester ) {this.primeTester = primeTester;}
 
