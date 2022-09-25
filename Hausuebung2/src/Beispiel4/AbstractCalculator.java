@@ -6,8 +6,7 @@ public abstract class AbstractCalculator {
     protected CalculationOperation multiply;
     protected CalculationOperation divide;
 
-    public AbstractCalculator(CalculationOperation add, CalculationOperation subtract, CalculationOperation multiply, CalculationOperation divide) {
-        //TODO
+    public AbstractCalculator() {
     }
 
     public abstract Number add(Number a, Number b);

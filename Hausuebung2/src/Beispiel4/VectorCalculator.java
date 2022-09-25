@@ -1,8 +1,7 @@
 package Beispiel4;
 
 public class VectorCalculator extends AbstractCalculator{
-    public VectorCalculator(CalculationOperation add, CalculationOperation subtract, CalculationOperation multiply, CalculationOperation divide) {
-        super(add, subtract, multiply, divide);
+    public VectorCalculator() {
     }
 
     @Override
